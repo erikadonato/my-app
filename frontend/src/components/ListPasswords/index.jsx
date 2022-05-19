@@ -9,7 +9,6 @@ const ListPassword = () => {
     const [data, setData ] = useState([])
     const [password, setPassword] = useState('******')
 
-    console.log(data)
     useEffect(() => {
         api.get('/list-password').then(response => setData(response.data.results))
     }, [])
